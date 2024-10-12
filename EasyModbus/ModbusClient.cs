@@ -1,26 +1,4 @@
-﻿/*
-Copyright (c) 2018-2020 Rossmann-Engineering
-Permission is hereby granted, free of charge, 
-to any person obtaining a copy of this software
-and associated documentation files (the "Software"),
-to deal in the Software without restriction, 
-including without limitation the rights to use, 
-copy, modify, merge, publish, distribute, sublicense, 
-and/or sell copies of the Software, and to permit 
-persons to whom the Software is furnished to do so, 
-subject to the following conditions:
-
-The above copyright notice and this permission 
-notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, 
-DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, 
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE 
-OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
- */
+﻿
 using System;
 using System.Net.Sockets;
 using System.Net;
@@ -83,11 +61,11 @@ namespace EasyModbus
 		public ModbusClient(string ipAddress, int port)
 		{
 			if (debug) StoreLogData.Instance.Store("EasyModbus library initialized for Modbus-TCP, IPAddress: " + ipAddress + ", Port: "+port ,System.DateTime.Now);
-#if (!COMMERCIAL)
-            Console.WriteLine("EasyModbus Client Library Version: " + Assembly.GetExecutingAssembly().GetName().Version.ToString());
-            Console.WriteLine("Copyright (c) Stefan Rossmann Engineering Solutions");
-            Console.WriteLine();
-#endif
+//#if (!COMMERCIAL)
+//            Console.WriteLine("EasyModbus Client Library Version: " + Assembly.GetExecutingAssembly().GetName().Version.ToString());
+//            Console.WriteLine("Copyright (c) Stefan Rossmann Engineering Solutions");
+//            Console.WriteLine();
+//#endif
             this.ipAddress = ipAddress;
 			this.port = port;
 		}
@@ -99,11 +77,11 @@ namespace EasyModbus
         public ModbusClient(string serialPort)
         {
         	if (debug) StoreLogData.Instance.Store("EasyModbus library initialized for Modbus-RTU, COM-Port: " + serialPort ,System.DateTime.Now);
-#if (!COMMERCIAL)
-            Console.WriteLine("EasyModbus Client Library Version: " + Assembly.GetExecutingAssembly().GetName().Version.ToString());
-            Console.WriteLine("Copyright (c) Stefan Rossmann Engineering Solutions");
-            Console.WriteLine();
-#endif
+//#if (!COMMERCIAL)
+//            Console.WriteLine("EasyModbus Client Library Version: " + Assembly.GetExecutingAssembly().GetName().Version.ToString());
+//            Console.WriteLine("Copyright (c) Stefan Rossmann Engineering Solutions");
+//            Console.WriteLine();
+//#endif
             this.serialport = new SerialPort();
             serialport.PortName = serialPort;
             serialport.BaudRate = baudRate;
@@ -121,11 +99,11 @@ namespace EasyModbus
         public ModbusClient()
         {
         	if (debug) StoreLogData.Instance.Store("EasyModbus library initialized for Modbus-TCP" ,System.DateTime.Now);
-#if (!COMMERCIAL)
-            Console.WriteLine("EasyModbus Client Library Version: " + Assembly.GetExecutingAssembly().GetName().Version.ToString());
-            Console.WriteLine("Copyright (c) Stefan Rossmann Engineering Solutions");
-            Console.WriteLine();
-#endif
+//#if (!COMMERCIAL)
+//            Console.WriteLine("EasyModbus Client Library Version: " + Assembly.GetExecutingAssembly().GetName().Version.ToString());
+//            Console.WriteLine("Copyright (c) Stefan Rossmann Engineering Solutions");
+//            Console.WriteLine();
+//#endif
         }
 		
 		/// <summary>
@@ -825,19 +803,14 @@ namespace EasyModbus
             receiveData = new byte[actualPositionToRead];
             Array.Copy(readBuffer, 0, receiveData, 0, (actualPositionToRead < readBuffer.Length) ? actualPositionToRead: readBuffer.Length);
             if (debug) StoreLogData.Instance.Store("Received Serial-Data: "+BitConverter.ToString(readBuffer) ,System.DateTime.Now);
-            bytesToRead = 0;
-
-
-         
+            bytesToRead = 0;         
             
             dataReceived = true;
             receiveActive = false;
             serialport.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler);
             if (ReceiveDataChanged != null)
             {
-
                 ReceiveDataChanged(this);
-
             }
             
             //sp.DiscardInBuffer();
