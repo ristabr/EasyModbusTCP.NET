@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EasyModbusAdvancedClient", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EasyModbus_Net60", "EasyModbus_Net60\EasyModbus_Net60.csproj", "{6BD5A885-D0A3-44C0-BF73-E2118519EAFE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModbusLib", "ModbusLib\ModbusLib.csproj", "{9E0B7263-1A23-4E5D-ACB2-5F0E057C9BBE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -105,6 +107,22 @@ Global
 		{6BD5A885-D0A3-44C0-BF73-E2118519EAFE}.Release|x64.Build.0 = Release|Any CPU
 		{6BD5A885-D0A3-44C0-BF73-E2118519EAFE}.Release|x86.ActiveCfg = Release|Any CPU
 		{6BD5A885-D0A3-44C0-BF73-E2118519EAFE}.Release|x86.Build.0 = Release|Any CPU
+		{9E0B7263-1A23-4E5D-ACB2-5F0E057C9BBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E0B7263-1A23-4E5D-ACB2-5F0E057C9BBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E0B7263-1A23-4E5D-ACB2-5F0E057C9BBE}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{9E0B7263-1A23-4E5D-ACB2-5F0E057C9BBE}.Debug|ARM.Build.0 = Debug|Any CPU
+		{9E0B7263-1A23-4E5D-ACB2-5F0E057C9BBE}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{9E0B7263-1A23-4E5D-ACB2-5F0E057C9BBE}.Debug|x64.Build.0 = Debug|Any CPU
+		{9E0B7263-1A23-4E5D-ACB2-5F0E057C9BBE}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{9E0B7263-1A23-4E5D-ACB2-5F0E057C9BBE}.Debug|x86.Build.0 = Debug|Any CPU
+		{9E0B7263-1A23-4E5D-ACB2-5F0E057C9BBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E0B7263-1A23-4E5D-ACB2-5F0E057C9BBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E0B7263-1A23-4E5D-ACB2-5F0E057C9BBE}.Release|ARM.ActiveCfg = Release|Any CPU
+		{9E0B7263-1A23-4E5D-ACB2-5F0E057C9BBE}.Release|ARM.Build.0 = Release|Any CPU
+		{9E0B7263-1A23-4E5D-ACB2-5F0E057C9BBE}.Release|x64.ActiveCfg = Release|Any CPU
+		{9E0B7263-1A23-4E5D-ACB2-5F0E057C9BBE}.Release|x64.Build.0 = Release|Any CPU
+		{9E0B7263-1A23-4E5D-ACB2-5F0E057C9BBE}.Release|x86.ActiveCfg = Release|Any CPU
+		{9E0B7263-1A23-4E5D-ACB2-5F0E057C9BBE}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
